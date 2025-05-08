@@ -21,7 +21,6 @@ func Test08() {
 		go func(data *int) {
 			// 模拟访问耗时
 			time.Sleep(time.Millisecond * time.Duration(rand.Intn(1000)))
-
 			// 加锁
 			mutex.Lock()
 			defer mutex.Unlock()
@@ -40,3 +39,4 @@ func Test08() {
 	wait.Wait()
 	fmt.Println("最终结果", count)
 }
+  

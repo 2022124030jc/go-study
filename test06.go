@@ -1,7 +1,6 @@
 package main
 
-//waitGroup 是一个计数信号量，用于等待一组 goroutine 完成
-
+// waitGroup 是一个计数信号量，用于等待一组 goroutine 完成
 import (
 	"fmt"
 	"sync"

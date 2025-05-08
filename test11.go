@@ -31,7 +31,9 @@ func Test11() {
 	// 注册swagger静态文件路由
 	engine.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	engine.GET("/api/v1/ping", Ping)
-	engine.Run(":80")
+	if err := engine.Run(":80"); err != nil {
+		panic(err)
+	}
 }
 
 // Ping godoc
